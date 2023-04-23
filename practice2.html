@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <p id="p1" style="border-width:3px; border-style:solid; border-color:#FFFFFF">some dummy text</p>
+
+  <input type="text" id="font" name="font" value="enter color"</input>
+  <button onclick="changeText()">Change font</button>
+
+  <input type="text" id="border" name="border" value="enter color"</input>
+  <button onclick="changeBorder()">Change border</button>
+
+  <input type="text" id="borderSize" name="borderSize" value="enter size"</input>
+  <button onclick="changeBorderSize()">Change border size</button>
+
+  <script>
+    function changeText(){
+      var textID = document.getElementById("p1");
+      var color = document.getElementById("font").value;
+      if (color == "blue" || color == "green" || color == "red"){
+        textID.style.color = color;
+      }
+    }
+
+    function changeBorder(){
+      var textID = document.getElementById("p1");
+      var color = document.getElementById("border").value;
+      if (color == "blue" || color == "green" || color == "red"){
+        textID.style.borderColor = color;
+      }
+    }
+
+    function changeBorderSize(){
+      var textID = document.getElementById("p1");
+      var size = document.getElementById("borderSize").value;
+      textID.style.borderWidth = size;
+    }
+  </script>
+</body>
+
+</html>

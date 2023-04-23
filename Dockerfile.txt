@@ -1,0 +1,4 @@
+FROM gcc:latest
+COPY Lab3code.c .
+RUN gcc -o Lab3code lab3code.c
+CMD ["./Lab3code"]
